@@ -76,3 +76,4 @@ One service serves both API and frontend static files.
 | API 404 / CORS | CORS in `backend/app/main.py`; correct `NEXT_PUBLIC_API_BASE_URL` |
 | DB connection | Use **Internal** Database URL from Render; run `alembic upgrade head` in Shell |
 | No admin user | Run `python backend/scripts/setup_admin.py` in Render Shell |
+| psycopg2 / Python 3.14 | Repo has `.python-version` with `3.12.8` so Render uses Python 3.12. Or set env var `PYTHON_VERSION=3.12.8` in Render dashboard. |
