@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from sqlalchemy import String, JSON
+from sqlalchemy import String, JSON, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.models.base import Base
@@ -11,7 +11,7 @@ class Employer(Base):
     __tablename__ = "employers"
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    user_id: Mapped[int] = mapped_column(nullable=False)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
 
     company_name_anonymized: Mapped[str] = mapped_column(String(255), nullable=True)
     industry: Mapped[str] = mapped_column(String(255), nullable=True)
@@ -28,5 +28,5 @@ class Employer(Base):
         default=datetime.utcnow, onupdate=datetime.utcnow, nullable=False
     )
 
-    user: Mapped[User] = relationship(primaryjoin="Employer.user_id == User.id")
+    user: Mapped[User] = relationship("User")
 
