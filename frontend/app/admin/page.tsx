@@ -446,6 +446,110 @@ export default function AdminPage() {
           </section>
         )}
 
+        {me && (
+          <section
+            style={{
+              marginTop: '1.5rem',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+              gap: '1rem',
+            }}
+          >
+            <div
+              style={{
+                padding: '1rem',
+                borderRadius: 12,
+                background: '#020617',
+                border: '1px solid #1e293b',
+              }}
+            >
+              <h2 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Роли</h2>
+              <p style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '0.75rem' }}>
+                Здесь будет список обезличенных ролей и создание новых. Пока это макет.
+              </p>
+              <button
+                type="button"
+                style={{
+                  padding: '0.5rem 0.9rem',
+                  borderRadius: 999,
+                  border: 'none',
+                  background: '#22c55e',
+                  color: '#020617',
+                  fontSize: '0.85rem',
+                  fontWeight: 600,
+                  cursor: 'default',
+                }}
+              >
+                + Создать роль (скоро)
+              </button>
+            </div>
+
+            <div
+              style={{
+                padding: '1rem',
+                borderRadius: 12,
+                background: '#020617',
+                border: '1px solid #1e293b',
+              }}
+            >
+              <h2 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Мэтчи</h2>
+              <p style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '0.75rem' }}>
+                Здесь появится список обезличенных кандидатов и статусы мэтчей.
+              </p>
+              <p style={{ fontSize: '0.8rem', color: '#6b7280' }}>
+                Пример: “Кандидат #1234 — 4.8 ★ — статус: в ожидании”.
+              </p>
+            </div>
+
+            <div
+              style={{
+                padding: '1rem',
+                borderRadius: 12,
+                background: '#020617',
+                border: '1px solid #1e293b',
+              }}
+            >
+              <h2 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Интервью</h2>
+              <p style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '0.75rem' }}>
+                Тут будут настройки сценария ИИ-интервью и версии вопросов.
+              </p>
+              <button
+                type="button"
+                style={{
+                  padding: '0.5rem 0.9rem',
+                  borderRadius: 999,
+                  border: '1px solid #1e293b',
+                  background: 'transparent',
+                  color: '#cbd5f5',
+                  fontSize: '0.85rem',
+                  cursor: 'default',
+                }}
+              >
+                Настроить сценарий (в разработке)
+              </button>
+            </div>
+
+            <div
+              style={{
+                padding: '1rem',
+                borderRadius: 12,
+                background: '#020617',
+                border: '1px solid #1e293b',
+              }}
+            >
+              <h2 style={{ fontSize: '1rem', marginBottom: '0.5rem' }}>Аналитика</h2>
+              <p style={{ fontSize: '0.85rem', color: '#9ca3af', marginBottom: '0.5rem' }}>
+                Здесь появятся базовые метрики: конверсия сценария, качество мэтчей и т.д.
+              </p>
+              <ul style={{ paddingLeft: '1rem', fontSize: '0.8rem', color: '#9ca3af' }}>
+                <li>Запуск интервью → профиль → мэтч</li>
+                <li>Средний рейтинг мэтчей</li>
+                <li>Частые темы вопросов</li>
+              </ul>
+            </div>
+          </section>
+        )}
+
         <p style={{ marginTop: '1.5rem', fontSize: '0.8rem', color: '#64748b' }}>
           Главная страница мониторинга API:{' '}
           <a href="/" style={{ color: '#38bdf8' }}>
